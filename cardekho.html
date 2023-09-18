@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Options</title>
+    <style>
+        /* Add your CSS styling here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        /* Style the form */
+        form {
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="checkbox"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        input[type="checkbox"] {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        button[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Car Options</h1>
+    </header>
+    
+    <div class="container">
+        <h2>Choose Car Options</h2>
+        
+        <form action="process_form.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="email">Email Id:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label>Address:</label>
+            <textarea id="address" name="address" rows="4" required></textarea>
+
+            <h3>Select Car Type:</h3>
+            <input type="checkbox" id="hatchback" name="car_type[]" value="Hatchback">
+            <label for="hatchback">Hatchback</label>
+
+            <input type="checkbox" id="sedan" name="car_type[]" value="Sedan">
+            <label for="sedan">Sedan</label>
+
+            <input type="checkbox" id="suv" name="car_type[]" value="SUV">
+            <label for="suv">SUV</label>
+
+            <td colspan="2" align="center" ><input type="submit" name="save" value="Submit" style="font-size:20px"></td>
+        </form>
+    </div>
+</body>
+</html>
